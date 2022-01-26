@@ -292,8 +292,14 @@
     .question, .answer {
         width: 90%;
     }
+    .form {
+        width: 85%;
+    }
     .buttons {
         width: 40%;
+    }
+    .capital, .country {
+        width: 85%;
     }
 }
 /*===========================FOOTER========================*/
