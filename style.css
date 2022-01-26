@@ -290,7 +290,7 @@
 }
 @media (max-width: 767px) {
     .question, .answer {
-        width: 80%;
+        width: 90%;
     }
     .buttons {
         width: 40%;
