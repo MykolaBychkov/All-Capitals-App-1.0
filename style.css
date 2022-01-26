@@ -290,7 +290,7 @@
 }
 @media (max-width: 767px) {
     .question, .answer {
-        width: 90%;
+        width: 100%;
     }
     .form {
         width: 85%;
