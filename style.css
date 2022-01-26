@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: block;
+    height: 100vh;
+    min-width: 360px;
+    margin: 0 auto; 
+}
+
+/*===========================HEADER=====================*/
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15%;
+    width: 100%;
+    min-width: 360px;
+    min-height: 90px;
+    background-color: black;
+}
+.logo {
+    position: relative;
+}
+.square {
+    position: absolute;
+    right: 50px;
+    height: 60px;
+    width: 60px;
+    border: 5px solid rgb(48, 157, 207);
+    border-radius: 3px;
+    cursor: pointer;
+    background: transparent;
+    box-shadow: 0 0 15px rgba(111, 202, 230, 0.87);
+    transform: translate(-50%,-50%);
+    animation: 25s square linear infinite;
+}
+.ball {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: url('logo.png') no-repeat center;
+    background-size: cover;
+    box-shadow: 0 0 15px rgba(220, 244, 252, 0.87);
+    animation: 25s ball linear infinite;
+}
+@keyframes ball {
+    0%{
+        transform: translateX(20px) translateY(20px);
+    }
+    25%{
+        transform: translateX(0px) translateY(20px);
+    }
+    50%{
+        transform: translateX(0px) translateY(0px);
+    }
+    75%{
+        transform: translateX(20px) translateY(0px);
+    }
+    100%{
+        transform: translateX(20px) translateY(20px);
+    }
+}
+@keyframes square {
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg)
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}    
+.title {
+    cursor: pointer;
+    color: white;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: 50px;
+    transition: all 0.5s;
+}
+.title:hover {
+    color: transparent;
+    -webkit-text-stroke-color: rgb(78, 161, 175);
+    -webkit-text-stroke-width: 2px;
+    text-shadow: 0 0 30px rgb(16, 191, 245);
+}
+@media (max-width: 767px) {
+    .title {
+        font-size: 30px;
+    }
+    .square {
+        right: 25px;
+    }
+}
+@media (max-width: 539px) {
+    .header {
+        justify-content: right;
+    }
+    .title {
+        margin-right: 30px;
+    }
+    .square {
+        right: 15px;
+    }
+}
+
+/*===========================MAIN========================*/
+
+.main {
+    display: flex;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+    min-width: 360px;
+    background: url('background.jpg') no-repeat center;
+    background-size: cover;
+}
+@media (max-width: 767px) {
+    .main {
+        flex-direction: column;
+        height: 100vh;
+    }
+}
+
+/*=QUESTION=*/
+
+.question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 40%;
+    padding-top: 15px;
+}
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 75%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.capitalName, .countryName {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-left: 15px;
+    border: transparent;
+    border-radius: 10px;
+    outline: none;
+    background: none;
+    color: white;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: 22px;
+}
+.capitalName:hover,
+.countryName:hover {
+    box-shadow: 0 0 30px rgb(240, 248, 250);
+}
+.capitalName:focus,
+.countryName:focus {
+    border-color: white;
+}
+.formLabel {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    cursor: text;
+    color: white;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    transition: 0.3s ease-in;
+}
+.capitalName:focus + .formLabel,
+.capitalName:not(:placeholder-shown).capitalName:not(:focus) + .formLabel,
+.countryName:focus + .formLabel,
+.countryName:not(:placeholder-shown).countryName:not(:focus) + .formLabel {
+    top: -25px;
+    left: 5px;
+    padding: 2px;
+    font-size: 12px;
+    color: white;
+    box-shadow: 0 0 20px rgb(168, 219, 228);
+}
+
+/*=BUTTONS=*/
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 20%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.find {
+    width: 75%;
+    margin-bottom: 10px;
+}
+#btnFind {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: 20px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,108,1) 34%, rgba(0,212,255,1) 100%);
+    box-shadow: 0 0 20px white;
+    transition: all 0.4s;
+}
+#btnFind:hover {
+    border: none;
+    color: green;
+    font-size: 24px;
+    background: rgba(167, 223, 233, 0.623);
+    text-shadow: 0 0 20px rgb(231, 242, 245);
+    box-shadow: 0 0 10px white;
+    -webkit-text-stroke-color: rgb(41, 48, 49);
+    -webkit-text-stroke-width: 1.5px;
+    transition: all 0.4s;
+}
+.clear {
+    width: 75%;
+    margin-top: 10px;
+}
+#btnClear {
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    border: none;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: 20px;
+    color: white;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,108,1) 34%, rgba(0,212,255,1) 100%);
+    box-shadow: 0 0 20px white;
+    border-radius: 15px;
+    transition: all 0.4s;
+}
+#btnClear:hover {
+    font-size: 24px;
+    background: rgba(167, 223, 233, 0.664);
+    color: red;
+    text-shadow: 0 0 20px rgb(231, 242, 245);
+    box-shadow: 0 0 10px white;
+    border: none;
+    -webkit-text-stroke-color: rgb(41, 48, 49);
+    -webkit-text-stroke-width: 1.5px;
+    transition: all 0.4s;
+}
+
+/*=ANSWER=*/
+
+.answer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 40%;
+}
+.capital, .country {
+    height: 50px;
+    width: 75%;
+    padding-left: 15px;
+    padding-top: 8px;
+    margin-bottom: 20px;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: 22px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.753);
+}
+.answer h3 {
+    color: white;
+    cursor: default;
+    text-shadow: 0 0 10px white;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+@media (max-width: 767px) {
+    .question, .answer {
+        width: 80%;
+    }
+    .buttons {
+        width: 40%;
+    }
+}
+/*===========================FOOTER========================*/
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+    width: 100%;
+    min-width: 360px;
+    background-color: black;
+}
+.github{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: white;
+}
+.githubIcon {
+    width: 30px;
+    height: 30px;
+    margin-right: 18px;
+}

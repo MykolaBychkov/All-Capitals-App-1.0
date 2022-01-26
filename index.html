@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Capitals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="pageOnload()">
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <div class="square">
+                    <div class="ball"></div>
+                </div>
+            </div>
+            <div class="title">All capitals</div>
+        </div>
+        <div class="main">
+            <div class="question">
+                <div class="form">
+                    <input type="text" class="countryName" id="countryName" list="datalistOptionsCountry" placeholder=" "/>
+                    <label class="formLabel" for="countryName">Country name</label>
+                    <datalist id="datalistOptionsCountry"></datalist>
+                </div>
+                <div class="form">
+                    <input type="text" class="capitalName" id="capitalName" list="datalistOptionsCapital" placeholder=" "/>
+                    <label class="formLabel" for="capitalName">Capital name</label>
+                    <datalist id="datalistOptionsCapital"></datalist>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="find">
+                    <button type="button" id="btnFind">FIND</button>
+                </div>
+                <div class="clear">
+                    <button type="button" id="btnClear">CLEAR</button>
+                </div>
+            </div>
+            <div class="answer">
+                <h3>Capital</h3>
+                <div class="capital" id="capital"></div>
+                <h3>Country</h3>
+                <div class="country" id="country"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <a class="github" href="https://github.com/MykolaBychkov" target="blank">
+                <img class="githubIcon" src="icon.png" alt="github icon"> 
+                Visit my GitHub
+            </a>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
