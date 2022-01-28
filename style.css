@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 15%;
+    height: 15vh;
     width: 100%;
     min-width: 360px;
     min-height: 90px;
@@ -112,7 +112,7 @@
 .main {
     display: flex;
     align-items: center;
-    height: 70%;
+    height: 85vh;
     width: 100%;
     min-width: 360px;
     background: url('background.jpg') no-repeat center;
@@ -121,7 +121,6 @@
 @media (max-width: 767px) {
     .main {
         flex-direction: column;
-        height: 100vh;
     }
 }
 
@@ -301,28 +300,4 @@
     .capital, .country {
         width: 85%;
     }
-}
-/*===========================FOOTER========================*/
-
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 15vh;
-    width: 100%;
-    min-width: 360px;
-    background-color: black;
-}
-.github{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-size: 20px;
-    font-family: 'Be Vietnam Pro', sans-serif;
-    color: white;
-}
-.githubIcon {
-    width: 30px;
-    height: 30px;
-    margin-right: 18px;
 }
